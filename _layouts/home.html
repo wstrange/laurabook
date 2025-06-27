@@ -1,0 +1,103 @@
+---
+layout: default
+---
+<!-- 
+This is a placeholder for the 'home' layout specific to the Forty theme.
+The actual theme file would be much more complex, likely involving:
+- A hero section (possibly with `page.landing-title`, `page.description`, `page.image`)
+- A section for "tiles" if configured in _config.yml and index.md
+- Other sections as defined by the theme.
+
+For a book promotion, we'd adapt this or create a new layout to show:
+1. Book Cover, Title, Author, Tagline
+2. Synopsis
+3. Author Bio (short)
+4. Call to Action / Purchase Links
+5. Testimonials/Reviews (Optional)
+6. Contact/Social Links (often in footer)
+-->
+
+<div id="main" class="alt">
+
+    <!-- Banner -->
+    <section id="banner" {% if page.image %}style="background-image: url('{{ page.image | relative_url }}')"{% endif %}>
+        <div class="inner">
+            <header class="major">
+                <h1>{{ page.landing-title | default: site.title }}</h1>
+            </header>
+            <div class="content">
+                <p>{{ page.description | default: site.description }}</p>
+                <!-- You might add a call to action button here -->
+                <!-- <ul class="actions">
+                    <li><a href="#one" class="button next scrolly">Learn More</a></li>
+                </ul> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section id="one">
+        <div class="inner">
+            <header class="major">
+                <h2>About the Book</h2>
+            </header>
+            <p>This is where a more detailed synopsis or introduction to the book would go. The content below is just a placeholder.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+            
+            <!-- Placeholder for actual page content from index.md if any -->
+            {{ content }}
+        </div>
+    </section>
+    
+    <!-- Placeholder for Author Bio -->
+    <section id="two" class="spotlights">
+        <section>
+            <!-- <a href="generic.html" class="image"> -->
+                <!-- <img src="assets/images/author_placeholder.jpg" alt="Author Name" data-position="center center" /> -->
+            <!-- </a> -->
+            <div class="content">
+                <div class="inner">
+                    <header class="major">
+                        <h3>About the Author: {{ site.author }}</h3>
+                    </header>
+                    <p>A brief bio of the author would go here. Introduce yourself and your connection to the book.</p>
+                    <!-- <ul class="actions">
+                        <li><a href="generic.html" class="button">Learn more</a></li>
+                    </ul> -->
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Placeholder for Where to Buy -->
+    <section id="three">
+        <div class="inner">
+            <header class="major">
+                <h2>Where to Buy</h2>
+            </header>
+            <p>Links to Amazon, Barnes & Noble, your publisher's site, etc., would go here.</p>
+            <ul class="actions">
+                <li><a href="#" class="button primary">Buy on Amazon (Placeholder)</a></li>
+                <li><a href="#" class="button">Buy on ExampleStore (Placeholder)</a></li>
+            </ul>
+        </div>
+    </section>
+
+</div>
+
+<!-- The original theme might have specific includes for how tiles are rendered -->
+<!-- {% if site.tiles-source == 'posts' %}
+    {% for tile in site.posts limit:site.tiles-count %}
+        {% include tile.html title=tile.title image=tile.image_path url=tile.url %}
+    {% endfor %}
+{% elsif site.tiles-source == 'pages' %}
+    {% for tile in site.html_pages limit:site.tiles-count %}
+      {% if tile.layout == "page" %}
+        {% include tile.html title=tile.title image=tile.image url=tile.url %}
+      {% endif %}
+    {% endfor %}
+{% endif %} -->
+
+<!-- The above tile logic is a simplified interpretation. The actual theme would have its own includes. -->
+<!-- For a single book, we might not even use the "tiles" feature of the Forty theme, 
+     or we might repurpose them for "Buy Links", "About Author", "Excerpt" etc. -->

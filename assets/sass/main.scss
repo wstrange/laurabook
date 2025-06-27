@@ -1,0 +1,46 @@
+---
+# Front matter signifies to Jekyll that this file should be processed.
+---
+
+// This is the main SCSS file for the "Forty" theme.
+// It would typically import all the necessary partials from the _sass/ directory.
+
+// Example imports (the actual theme has many more):
+// @import "libs/vars";         // from _sass/libs/_vars.scss
+// @import "libs/functions";    // from _sass/libs/_functions.scss
+// @import "libs/mixins";       // from _sass/libs/_mixins.scss
+// @import "layout/header";     // from _sass/layout/_header.scss
+// ... and so on.
+
+// For now, using the minimal placeholder styles:
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header a, footer a {
+    color: #fff;
+}
+
+#main {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
+}
+
+// When Jekyll processes this file, it will create assets/css/main.css
+// The _sass directory should contain all the imported partials.
+// For this basic setup, _sass might be empty or contain a placeholder partial.
+// I will create a placeholder partial in _sass for completeness.
+@import "placeholder-styles"; // This will look for _sass/_placeholder-styles.scss
