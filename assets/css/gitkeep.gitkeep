@@ -1,2 +1,0 @@
-# This .gitkeep file ensures the assets/css directory is created and tracked by Git,
-# even if it's empty initially. Jekyll will place the compiled main.css here.
